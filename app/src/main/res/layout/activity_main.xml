@@ -67,5 +67,32 @@
             android:textColor="@color/white"
             android:textSize="14sp" />
 
+        <Button
+            android:id="@+id/workmanager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="workmanager"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/navigator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="navigator"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/paging"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="paging"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
     </LinearLayout>
 </ScrollView>

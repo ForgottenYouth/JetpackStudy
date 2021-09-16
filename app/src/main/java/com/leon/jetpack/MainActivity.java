@@ -12,9 +12,13 @@ import android.view.View;
 import com.leon.jetpack.databinding.DataBindingMainActivity;
 import com.leon.jetpack.hilt.activity.HiltActivity;
 import com.leon.jetpack.lifecycle.LifecycleActivity;
+import com.leon.jetpack.livedata.LiveDataMainActivity;
+import com.leon.jetpack.navigator.NavigatorMainActivity;
+import com.leon.jetpack.paging.PagingMainActivity;
 import com.leon.jetpack.room.RoomMainActivity;
 import com.leon.jetpack.viewmodel.BaseViewModel;
 import com.leon.jetpack.viewmodel.ViewModelActivity;
+import com.leon.jetpack.workmanager.WorkManagerMainActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -45,10 +49,19 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(this, ViewModelActivity.class));
                 break;
             case R.id.livedata:
-                startActivity(new Intent(this, ViewModelActivity.class));
+                startActivity(new Intent(this, LiveDataMainActivity.class));
                 break;
             case R.id.room:
                 startActivity(new Intent(this, RoomMainActivity.class));
+                break;
+            case R.id.workmanager:
+                startActivity(new Intent(this, WorkManagerMainActivity.class));
+                break;
+            case R.id.paging:
+                startActivity(new Intent(this, PagingMainActivity.class));
+                break;
+            case R.id.navigator:
+                startActivity(new Intent(this, NavigatorMainActivity.class));
                 break;
             default:
                 break;

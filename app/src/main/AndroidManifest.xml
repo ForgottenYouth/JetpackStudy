@@ -10,7 +10,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Jetpack">
-        <activity android:name=".room.RoomMainActivity"></activity>
+        <activity android:name=".navigator.NavigatorMainActivity"></activity>
+        <activity android:name=".paging.PagingMainActivity" />
+        <activity android:name=".workmanager.WorkManagerMainActivity" />
+        <activity android:name=".room.RoomMainActivity" />
         <activity android:name=".livedata.LiveDataMainActivity" />
         <activity android:name=".viewmodel.ViewModelActivity" />
         <activity android:name=".databinding.DataBindingMainActivity" />

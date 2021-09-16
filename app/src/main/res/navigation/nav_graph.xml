@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/home">
+
+    <fragment
+        android:id="@+id/home"
+        android:name="com.leon.jetpack.navigator.FragmentFirst"
+        android:label="首页"
+        tools:layout="@layout/fragment_navigator_first_layout">
+        <action
+            android:id="@+id/gotoSectond"
+            app:destination="@id/square" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/square"
+        android:name="com.leon.jetpack.navigator.FragmentSecond"
+        android:label="广场"
+        tools:layout="@layout/fragment_navigator_second_layout">
+        <action
+            android:id="@+id/backtoFirst"
+            app:destination="@id/home" />
+
+        <action
+            android:id="@+id/gotothird"
+            app:destination="@+id/mine" />
+    </fragment>
+    <fragment
+        android:id="@+id/mine"
+        android:name="com.leon.jetpack.navigator.FragmentThird"
+        android:label="我的"
+        tools:layout="@layout/fragment_navigator_third_layout">
+        <action
+            android:id="@+id/backtoSecond"
+            app:destination="@+id/square" />
+
+        <action
+            android:id="@+id/gotofirst"
+            app:destination="@+id/home" />
+    </fragment>
+
+</navigation>
