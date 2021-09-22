@@ -1,7 +1,6 @@
 package com.leon.jetpack;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Intent;
@@ -9,8 +8,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
-import com.leon.jetpack.cardview.CardViewMainActivity;
-import com.leon.jetpack.constraintlayout.ConstraintLayoutMainActivity;
+import com.leon.jetpack.widgets.LayoutContainerMainActivity;
+import com.leon.jetpack.widgets.cardview.CardViewMainActivity;
+import com.leon.jetpack.widgets.constraintlayout.ConstraintLayoutMainActivity;
 import com.leon.jetpack.databinding.DataBindingMainActivity;
 import com.leon.jetpack.hilt.activity.HiltActivity;
 import com.leon.jetpack.lifecycle.LifecycleActivity;
@@ -70,6 +70,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.constraintlayout:
                 startActivity(new Intent(this, ConstraintLayoutMainActivity.class));
+                break;
+            case R.id.layout_container:
+                startActivity(new Intent(this, LayoutContainerMainActivity.class));
                 break;
             default:
                 break;

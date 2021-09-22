@@ -1,4 +1,4 @@
-package com.leon.jetpack.cardview;
+package com.leon.jetpack.widgets.cardview;
 
 import androidx.appcompat.app.AppCompatActivity;
 
