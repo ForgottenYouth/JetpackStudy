@@ -94,5 +94,24 @@
             android:textColor="@color/white"
             android:textSize="14sp" />
 
+
+        <Button
+            android:id="@+id/cardview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="cardview"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/constraintlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="constraintlayout"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
     </LinearLayout>
 </ScrollView>

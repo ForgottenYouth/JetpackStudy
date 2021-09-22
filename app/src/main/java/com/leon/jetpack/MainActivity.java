@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
+import com.leon.jetpack.cardview.CardViewMainActivity;
+import com.leon.jetpack.constraintlayout.ConstraintLayoutMainActivity;
 import com.leon.jetpack.databinding.DataBindingMainActivity;
 import com.leon.jetpack.hilt.activity.HiltActivity;
 import com.leon.jetpack.lifecycle.LifecycleActivity;
@@ -62,6 +64,12 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.navigator:
                 startActivity(new Intent(this, NavigatorMainActivity.class));
+                break;
+            case R.id.cardview:
+                startActivity(new Intent(this, CardViewMainActivity.class));
+                break;
+            case R.id.constraintlayout:
+                startActivity(new Intent(this, ConstraintLayoutMainActivity.class));
                 break;
             default:
                 break;

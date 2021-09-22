@@ -10,7 +10,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Jetpack">
-        <activity android:name=".navigator.NavigatorMainActivity"></activity>
+        <activity android:name=".constraintlayout.ConstraintLayoutMainActivity"></activity>
+        <activity android:name=".cardview.CardViewMainActivity" />
+        <activity android:name=".navigator.NavigatorMainActivity" />
         <activity android:name=".paging.PagingMainActivity" />
         <activity android:name=".workmanager.WorkManagerMainActivity" />
         <activity android:name=".room.RoomMainActivity" />

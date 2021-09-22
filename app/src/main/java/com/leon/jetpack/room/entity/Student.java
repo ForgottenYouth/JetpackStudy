@@ -20,7 +20,7 @@ import androidx.room.PrimaryKey;
  * @PrimaryKey 表示是一个主键，参数autoGenerate 为true时，表示主键是自动生成的，这里不能给默认值
  * @ColumnInfo 表示表中的一个属性列信息，参数name 就是标的列的名称，与定义的变量名一致
  */
-@Entity(foreignKeys = {@ForeignKey(entity = Teacher.class, parentColumns = "teacherId", childColumns = "teachId")})
+@Entity//(foreignKeys = {@ForeignKey(entity = Teacher.class, parentColumns = "teacherId", childColumns = "teachId")})
 public class Student {
 
     @PrimaryKey(autoGenerate = true)
