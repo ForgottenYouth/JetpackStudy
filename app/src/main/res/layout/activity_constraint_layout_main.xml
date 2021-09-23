@@ -7,13 +7,194 @@
     android:layout_height="match_parent"
     tools:context=".widgets.constraintlayout.ConstraintLayoutMainActivity">
 
-    <TextView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="hello constraintLayout"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--相对位置属性-->
+
+    <!--  <TextView
+          android:id="@+id/view1"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="10dp"
+          android:layout_marginRight="10dp"
+          android:background="#ff0000"
+          android:padding="10dp"
+          android:text="视图1"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+      <TextView
+          android:id="@+id/view2"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="20dp"
+          android:layout_marginTop="10dp"
+          android:background="#ff0fff"
+          android:padding="10dp"
+          android:text="视图2"
+          android:textSize="20sp"
+          app:layout_constraintStart_toEndOf="@+id/view1"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_goneMarginLeft="0dp" />
+
+
+      <TextView
+          android:id="@+id/view3"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#00ff00"
+          android:padding="10dp"
+          android:text="弧角位置的视图"
+          app:layout_constraintCircle="@id/view2"
+          app:layout_constraintCircleAngle="140"
+          app:layout_constraintCircleRadius="100dp"
+          tools:ignore="MissingConstraints" />
+
+
+      <TextView
+          android:id="@+id/view4"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="10dp"
+          android:background="#b0ffff"
+          android:gravity="center"
+          android:padding="10dp"
+          android:text="大小视图"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/view3"
+          app:layout_constraintWidth_percent="0.5" />
+
+
+      <TextView
+          android:id="@+id/view5"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="10dp"
+          android:background="#b0ffff"
+          android:gravity="center"
+          android:padding="10dp"
+          android:text="大小视图&#45;&#45;ratio"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/view4" />-->
+
+
+    <!--
+    1、对于高度不同的视图，想要做到文本内容对齐，使用layout_constraintBaseline_toBaselineOf
+    2、设置视图的宽高比例：app:layout_constraintDimensionRatio="1:1"  次属性的在图片的展示上使用非常方便
+    3、对于width ,height 的使用，官方建议使用 0 dp
+    4、
+    -->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/hello"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="30dp"-->
+    <!--        android:text="hello"-->
+    <!--        android:textColor="#00ff0f"-->
+    <!--        android:textSize="10sp"-->
+    <!--        app:layout_constraintBaseline_toBaselineOf="@+id/constraintlayout"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/constraintlayout"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="50dp"-->
+    <!--        android:layout_marginLeft="20dp"-->
+    <!--        android:text="constraintLayout"-->
+    <!--        android:textColor="#ff0000"-->
+    <!--        android:textSize="20sp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toEndOf="@+id/hello"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:layout_goneMarginLeft="0dp" />-->
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/img"-->
+    <!--        android:layout_width="200dp"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:src="@drawable/ic_home"-->
+    <!--        app:layout_constraintDimensionRatio="1:1"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/constraintlayout" />-->
+
+
+    <!--    <androidx.constraintlayout.widget.Guideline-->
+    <!--        android:id="@+id/guideline"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:orientation="horizontal"-->
+    <!--        app:layout_constraintGuide_begin="250dp"-->
+    <!--        app:layout_constraintGuide_end="35dp"-->
+    <!--         />-->
+
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/img2"-->
+    <!--        android:layout_width="50dp"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:src="@drawable/ic_person"-->
+    <!--        app:layout_constraintDimensionRatio="1:1"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/img3"-->
+    <!--        android:layout_width="100dp"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:src="@drawable/ic_home"-->
+    <!--        app:layout_constraintDimensionRatio="1:1"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/img2" />-->
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/img5"-->
+    <!--        android:layout_width="190dp"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:src="@drawable/ic_square"-->
+    <!--        app:layout_constraintDimensionRatio="1:1"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/img4" />-->
+
+    <!--    <androidx.constraintlayout.widget.Barrier-->
+    <!--        android:id="@+id/barrier2"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        app:barrierDirection="bottom"-->
+    <!--        app:barrierAllowsGoneWidgets="false"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/img3"-->
+    <!--        app:constraint_referenced_ids="img2,img3" />-->
+
+    <!--    <androidx.constraintlayout.widget.Barrier-->
+    <!--        android:id="@+id/barrier"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        app:barrierDirection="end"-->
+    <!--        app:constraint_referenced_ids="img2,img3,img5,barrier2" />-->
+
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/img4"-->
+    <!--        android:layout_width="150dp"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:src="@drawable/ic_square"-->
+    <!--        app:layout_constraintDimensionRatio="1:1"-->
+    <!--        app:layout_constraintStart_toEndOf="@id/barrier" />-->
+
+
+    <!--Group
+    1.用来控制一组view是否可见
+    -->
+
+
+
+    <androidx.constraintlayout.widget.Group
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
