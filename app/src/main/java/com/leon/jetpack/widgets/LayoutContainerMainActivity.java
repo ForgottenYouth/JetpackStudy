@@ -17,6 +17,7 @@ import com.leon.jetpack.room.RoomMainActivity;
 import com.leon.jetpack.viewmodel.ViewModelActivity;
 import com.leon.jetpack.widgets.cardview.CardViewMainActivity;
 import com.leon.jetpack.widgets.constraintlayout.ConstraintLayoutMainActivity;
+import com.leon.jetpack.widgets.floatingactionbutton.FloatingActionButtonMainActivity;
 import com.leon.jetpack.workmanager.WorkManagerMainActivity;
 
 public class LayoutContainerMainActivity extends AppCompatActivity {
@@ -38,6 +39,9 @@ public class LayoutContainerMainActivity extends AppCompatActivity {
                 break;
             case R.id.layout_container:
                 startActivity(new Intent(this, LayoutContainerMainActivity.class));
+                break;
+            case R.id.floatingactionbutton:
+                startActivity(new Intent(this, FloatingActionButtonMainActivity.class));
                 break;
             default:
                 break;
