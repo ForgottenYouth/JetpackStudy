@@ -10,7 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Jetpack">
-        <activity android:name=".widgets.floatingactionbutton.FloatingActionButtonMainActivity"></activity>
+        <activity android:name=".widgets.motionlayout.MotionLayoutMainActivity"></activity>
+        <activity android:name=".widgets.floatingactionbutton.FloatingActionButtonMainActivity" />
         <activity android:name=".widgets.LayoutContainerMainActivity" />
         <activity android:name=".widgets.constraintlayout.ConstraintLayoutMainActivity" />
         <activity android:name=".widgets.cardview.CardViewMainActivity" />
