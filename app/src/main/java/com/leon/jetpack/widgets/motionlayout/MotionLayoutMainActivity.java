@@ -11,6 +11,6 @@ public class MotionLayoutMainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_motion_layout_main);
+        setContentView(R.layout.activity_motion_start_layout_main);
     }
 }

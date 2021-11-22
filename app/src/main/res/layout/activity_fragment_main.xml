@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".widgets.fragment.FragmentMainActivity">
+
+    <FrameLayout
+        android:id="@+id/topcontent"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="#ff0000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/show_dialogfragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:onClick="onClick"
+        android:text="Show DialogFragment"
+        app:layout_constraintEnd_toStartOf="@id/show_Listfragment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topcontent" />
+
+    <Button
+        android:id="@+id/show_Listfragment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:onClick="onClick"
+        android:text="Show ListFragment"
+        app:layout_constraintBottom_toBottomOf="@id/show_dialogfragment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/show_dialogfragment"
+        app:layout_constraintTop_toTopOf="@id/show_dialogfragment" />
+
+    <FrameLayout
+        android:id="@+id/bottomcontent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffff00"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/show_dialogfragment" />
+</androidx.constraintlayout.widget.ConstraintLayout>

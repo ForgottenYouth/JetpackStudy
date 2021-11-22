@@ -27,6 +27,5 @@ public class ConstraintLayoutMainActivity extends AppCompatActivity {
 
         ConstraintLayout constraintLayout = findViewById(R.id.root);
         set.applyTo(constraintLayout);
-
     }
 }

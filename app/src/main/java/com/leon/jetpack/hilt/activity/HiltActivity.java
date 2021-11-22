@@ -14,10 +14,10 @@ import dagger.hilt.android.AndroidEntryPoint;
 
 import static android.content.ContentValues.TAG;
 
-@AndroidEntryPoint
+//@AndroidEntryPoint
 public class HiltActivity extends AppCompatActivity {
 
-    @Inject
+//    @Inject
     IBook book;
 
     @Override

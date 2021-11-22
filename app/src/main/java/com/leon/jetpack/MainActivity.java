@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
+import com.leon.jetpack.camerax.CameraXMainActivity;
 import com.leon.jetpack.widgets.LayoutContainerMainActivity;
 import com.leon.jetpack.widgets.cardview.CardViewMainActivity;
 import com.leon.jetpack.widgets.constraintlayout.ConstraintLayoutMainActivity;
@@ -73,6 +74,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.layout_container:
                 startActivity(new Intent(this, LayoutContainerMainActivity.class));
+                break;
+            case R.id.camera:
+                startActivity(new Intent(this, CameraXMainActivity.class));
                 break;
             default:
                 break;

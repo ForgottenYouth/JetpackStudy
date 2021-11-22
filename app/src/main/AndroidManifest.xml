@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.leon.jetpack">
 
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
     <application
         android:name=".hilt.application.HiltApplication"
         android:allowBackup="true"
@@ -10,7 +14,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Jetpack">
-        <activity android:name=".widgets.motionlayout.MotionLayoutMainActivity"></activity>
+        <activity android:name=".widgets.fragment.FragmentMainActivity"></activity>
+        <activity
+            android:name=".camerax.CameraXMainActivity"
+            android:theme="@style/notitlefullscreen" />
+        <activity android:name=".widgets.motionlayout.MotionLayoutMainActivity" />
         <activity android:name=".widgets.floatingactionbutton.FloatingActionButtonMainActivity" />
         <activity android:name=".widgets.LayoutContainerMainActivity" />
         <activity android:name=".widgets.constraintlayout.ConstraintLayoutMainActivity" />
@@ -38,7 +46,10 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
+        </activity> <!-- 全屏设置必须的 -->
+        <meta-data
+            android:name="android.notch_support"
+            android:value="true" />
     </application>
 
 </manifest>

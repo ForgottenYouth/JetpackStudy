@@ -1,25 +1,17 @@
 package com.leon.jetpack.widgets;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.leon.jetpack.R;
-import com.leon.jetpack.databinding.DataBindingMainActivity;
-import com.leon.jetpack.hilt.activity.HiltActivity;
-import com.leon.jetpack.lifecycle.LifecycleActivity;
-import com.leon.jetpack.livedata.LiveDataMainActivity;
-import com.leon.jetpack.navigator.NavigatorMainActivity;
-import com.leon.jetpack.paging.PagingMainActivity;
-import com.leon.jetpack.room.RoomMainActivity;
-import com.leon.jetpack.viewmodel.ViewModelActivity;
 import com.leon.jetpack.widgets.cardview.CardViewMainActivity;
 import com.leon.jetpack.widgets.constraintlayout.ConstraintLayoutMainActivity;
 import com.leon.jetpack.widgets.floatingactionbutton.FloatingActionButtonMainActivity;
+import com.leon.jetpack.widgets.fragment.FragmentMainActivity;
 import com.leon.jetpack.widgets.motionlayout.MotionLayoutMainActivity;
-import com.leon.jetpack.workmanager.WorkManagerMainActivity;
 
 public class LayoutContainerMainActivity extends AppCompatActivity {
 
@@ -46,6 +38,9 @@ public class LayoutContainerMainActivity extends AppCompatActivity {
                 break;
             case R.id.motionlayout:
                 startActivity(new Intent(this, MotionLayoutMainActivity.class));
+                break;
+            case R.id.fragmentlayout:
+                startActivity(new Intent(this, FragmentMainActivity.class));
                 break;
             default:
                 break;

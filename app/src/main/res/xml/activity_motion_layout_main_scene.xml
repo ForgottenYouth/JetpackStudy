@@ -1,36 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:motion="http://schemas.android.com/tools">
 
-    <Transition
-        motion:constraintSetStart="@id/start"
-        motion:constraintSetEnd="@+id/end"
-        motion:duration="1000">
-        <OnSwipe
-            motion:touchAnchorId="@+id/button"
-            motion:touchAnchorSide="right"
-            motion:dragDirection="dragRight" />
-    </Transition>
 
-    <ConstraintSet android:id="@+id/start">
-        <Constraint
-            android:id="@+id/button"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:layout_marginStart="8dp"
-            motion:layout_constraintBottom_toBottomOf="parent"
-            motion:layout_constraintStart_toStartOf="parent"
-            motion:layout_constraintTop_toTopOf="parent" />
-    </ConstraintSet>
+<!--    <Transition-->
+<!--        app:constraintSetEnd="@layout/activity_motion_end_layout_main"-->
+<!--        app:constraintSetStart="@layout/activity_motion_start_layout_main"-->
+<!--        app:duration="1000">-->
+<!--        <OnSwipe-->
+<!--            motion:dragDirection="dragTop"-->
+<!--            motion:touchAnchorId="@+id/button"-->
+<!--            motion:touchAnchorSide="right" />-->
+<!--    </Transition>-->
 
-    <ConstraintSet android:id="@+id/end">
-        <Constraint
-            android:id="@+id/button"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:layout_marginEnd="8dp"
-            motion:layout_constraintBottom_toBottomOf="parent"
-            motion:layout_constraintEnd_toEndOf="parent"
-            motion:layout_constraintTop_toTopOf="parent" />
-    </ConstraintSet>
+
+       <!--这里是对运单的描述
+       constraintSetEnd：代表终点
+       constraintSetStart：代表起点
+       duration：运动的时间  毫秒为单位
+       -->
+       <Transition
+           app:constraintSetEnd="@layout/activity_motion_end_layout_main"
+           app:constraintSetStart="@layout/activity_motion_start_layout_main"
+           motion:duration="1000">
+
+
+           <!--这里是对手动触摸的支持
+           dragDirection：运动的方向
+           touchAnchorId: 拖动的视图
+           touchAnchorSide：从哪一边开始拖动视图
+           -->
+           <OnSwipe
+               motion:dragDirection="dragRight"
+               motion:touchAnchorId="@id/button"
+               motion:touchAnchorSide="right" />
+       </Transition>
+
+       <!--描述运单的位置的限制条件
+
+       -->
+       <ConstraintSet android:id="@+id/start">
+           <Constraint
+               android:id="@+id/button"
+               android:layout_width="64dp"
+               android:layout_height="64dp"
+               android:layout_marginStart="8dp"
+               motion:layout_constraintBottom_toBottomOf="parent"
+               motion:layout_constraintStart_toStartOf="parent"
+               motion:layout_constraintTop_toTopOf="parent">
+               <CustomAttribute
+                   app:attributeName="backgroundColor"
+                   motion:customColorValue="#D81B60" />
+           </Constraint>
+
+       </ConstraintSet>
+
+       <ConstraintSet
+           android:id="@+id/end"
+           motion:deriveConstraintsFrom="@id/start">
+           <Constraint
+               android:id="@+id/button"
+               android:layout_width="64dp"
+               android:layout_height="64dp"
+               android:layout_marginEnd="64dp"
+               motion:layout_constraintBottom_toBottomOf="parent"
+               motion:layout_constraintTop_toTopOf="parent"
+               motion:layout_constraintEnd_toEndOf="parent">
+               <CustomAttribute
+                   app:attributeName="backgroundColor"
+                   motion:customColorValue="#D8fB60" />
+           </Constraint>
+       </ConstraintSet>
 </MotionScene>
